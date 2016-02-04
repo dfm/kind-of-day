@@ -96,7 +96,6 @@ if __name__ == "__main__":
 
     # Compute the most "special" words.
     tfidf = compute_tfidf(files["info"]["N"], files["df"], tf)
-    print(tfidf.most_common(40))
     words, rates = zip(*(tfidf.most_common(40)))
     u = random.random() * sum(rates)
     x = 0.0
